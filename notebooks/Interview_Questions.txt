@@ -1,0 +1,69 @@
+Day - 1 - EDA
+
+After EDA, answer these questions yourself:
+
+1. Which rating occurs most?
+
+
+2. Are users rating many movies or few?
+
+
+3. Is the dataset sparse?
+
+
+4. Why is sparsity difficult?
+
+
+5. Why recommendation systems are different from classification?
+
+Day - 2 - Popularity based
+
+1. Check how many movies fall below the threshold (less than 50 ratings).
+
+
+2. Observe the difference between avg_rating and weighted_rating.
+
+
+3. Think why weighted rating is fairer than simple average.
+
+
+4. Try changing the minimum threshold (m=100) → see effect on top 10 movies.
+
+Day - 3 - User based Collabrative filtering
+
+📌 Homework / Experiments
+
+Try different target users and compare recommendations.
+
+Change number of similar users (top 3, 5, 10) → see effect.
+
+Experiment with Pearson vs Cosine similarity → subtle difference.
+
+Find a sparsely-rated user → see how predictions get affected.
+
+🔹 Step 4 — Compare Pearson vs Cosine
+
+You’ll notice:
+
+Pearson may give high similarity to users who rate differently in scale but same taste.
+
+Cosine may rank some of them lower if their ratings are consistently higher or lower.
+
+Example Output (illustrative):
+
+Top 5 users by Pearson similarity: User 123: 0.92 User 87: 0.90 User 45: 0.89 User 78: 0.88 User 56: 0.87
+
+Top 5 users by Cosine similarity: User 87: 0.95 User 45: 0.94 User 56: 0.92 User 123: 0.90 User 78: 0.89
+
+Notice subtle differences in ranking.
+
+🧠 Key Takeaways
+
+Pearson correlation → focuses on patterns, ignores rating scale, better for explicit ratings.
+
+Cosine similarity → sensitive to absolute scale, better for implicit feedback (clicks, views).
+
+Choice of similarity metric affects which users are chosen as neighbors, which in turn affects personalized recommendations.
+
+Day - 4 - Item_Based_Collabrative_Filtering
+
